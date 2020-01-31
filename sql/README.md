@@ -17,3 +17,5 @@ SELECT x.vendedor_nome,
  WHERE x.rank = 1
 ORDER BY x.venda_valor DESC;
 ```
+
+![demonstração-shell](https://github.com/ernane/desafio/blob/master/gifs/desafio-sql.gif)
