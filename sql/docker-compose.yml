@@ -1,0 +1,34 @@
+# Run:
+#      docker-compose down && docker-compose up
+
+version: "3"
+services:
+  postgres-server:
+    image: postgres:9.6-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=challenge2020
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - postgres-challenge-network
+
+  postgres-pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=challenge@email.com
+      - PGADMIN_DEFAULT_PASSWORD=challenge2020
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres-server
+    networks:
+      - postgres-challenge-network
+
+networks:
+  postgres-challenge-network:
+    driver: bridge
