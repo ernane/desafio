@@ -24,7 +24,7 @@ SELECT x.vendedor_nome,
 ORDER BY x.venda_valor DESC;
 ```
 
-**Resultado:** A consulta SQL acima retorna o resultado abaixo.
+**Resultado:** Resultado da consulta SQL acima
 
 ![resultado-sql](https://github.com/ernane/desafio/blob/master/assets/images/consulta-sql.png)
 
@@ -53,20 +53,20 @@ Clonar o repositório e entrar no diretório do desafio SQL
 git clone https://github.com/ernane/desafio.git && cd desafio/sql
 ```
 
-Subir a Stack via docker compose
+Subir a Stack via docker-compose
 
 ```shell
 docker-compose up
 ```
 
-Após o docker compose baixar as imagens e iniciar os containers com as configurações pré-definidas.
+Após o **docker-compose** baixar as imagens e iniciar os containers com as configurações pré-definidas.
 Você pode abrir um novo shell e ganhar terminal para o container onde está instalado o banco de dados
 
 ```shell
 docker exec -it sql_postgres-server_1 psql -U postgres
 ```
 
-Dentro do terminal do container **sql_postgres-server_1** você pode executar a consulta abaixo e conferir o resultado
+Dentro do terminal shell do container **sql_postgres-server_1** você pode executar a consulta abaixo e conferir o resultado
 
 ```sql
 SELECT x.vendedor_nome,
@@ -94,7 +94,7 @@ ORDER BY x.venda_valor DESC;
 
 ## Demonstração da solução via pgAdmin
 
-Após a construção da Stack, também é iniciado o serviço web do [pgAdmin](http://localhost:8080/) que está rodando na porta 8080
+Após a construção da Stack, também é iniciado o serviço web do [pgAdmin](http://localhost:8080/) que está rodando na porta 8080.
 Os parametros de configuração para utilização da ferramenta são:
 
 ```shell
