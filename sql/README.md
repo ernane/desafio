@@ -1,3 +1,9 @@
+# Desafio SQL
+
+**Problema:** Você tem duas tabelas em um banco de dados relacional(Vendedor e Venda). Retorne a lista com a venda de valor mais alto de cada vendedor para o ano de 2016.
+
+**Solução:** Consulta abaixo retorna a maior venda de dados os vendedores para o ano de 2016.
+
 ```sql
 SELECT x.vendedor_nome,
        x.venda_data,
@@ -18,4 +24,8 @@ SELECT x.vendedor_nome,
 ORDER BY x.venda_valor DESC;
 ```
 
-![demonstração-shell](https://github.com/ernane/desafio/blob/master/gifs/desafio-sql.gif)
+**Resultado:** A consulta SQL acima retorna o resultado abaixo.
+
+![resultado-sql](https://github.com/ernane/desafio/blob/master/assets/images/consulta-sql.png)
+
+![demonstração-shell](https://github.com/ernane/desafio/blob/master/assets/gifs/desafio-sql.gif)
