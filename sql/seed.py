@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import random
 import datetime
 
@@ -25,7 +27,8 @@ def print_(venda):
                                random.randint(2015, 2018)), '%j %Y'))
 
             print(
-                f"INSERT INTO public.venda(vendedor_id, venda_data, venda_valor) VALUES({vendedor}, '{data[0:10]}', {valor});", file=saida)
+                f"INSERT INTO public.venda(vendedor_id, venda_data, \
+venda_valor) VALUES({vendedor}, '{data[0:10]}', {valor});", file=saida)
 
 
 if __name__ == "__main__":
