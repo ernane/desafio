@@ -1,7 +1,7 @@
 import pandas as pd
 from matriz import (matrizCorreta, matrizEscadinha, matrizEscadinhaEstendida,
                     matrizEscadinhaReversa, matrizInutilizavel_1,
-                    matrizInutilizavel_2)
+                    matrizInutilizavel_2, matrizEscadinhaNegativo)
 
 
 def isescadinha(dt_frame):
@@ -73,6 +73,8 @@ if __name__ == '__main__':
             'dt': pd.DataFrame(matrizInutilizavel_1)},
         {'index': 'Inutilizavel_2',
             'dt': pd.DataFrame(matrizInutilizavel_2)},
+        {'index': 'EscadinhaNegativo',
+            'dt': pd.DataFrame(matrizEscadinhaNegativo)},
     )
 
     data_frames_ordem = (
@@ -80,6 +82,8 @@ if __name__ == '__main__':
         {'index': 'Escadinha', 'dt': pd.DataFrame(matrizEscadinha)},
         {'index': 'EscadinhaEstendida',
             'dt': pd.DataFrame(matrizEscadinhaEstendida)},
+        {'index': 'EscadinhaNegativo',
+            'dt': pd.DataFrame(matrizEscadinhaNegativo)},
         {'index': 'EscadinhaReversa',
             'dt': pd.DataFrame(matrizEscadinhaReversa)},
         {'index': 'Inutilizavel_1',
